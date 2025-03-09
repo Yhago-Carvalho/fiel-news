@@ -1,4 +1,4 @@
-import { FielNewsPage } from "../components/FielNewsPage";
+import { FielNewsPage } from "../FielNewsPage";
 
 const Home = () => {
   return <FielNewsPage />;
