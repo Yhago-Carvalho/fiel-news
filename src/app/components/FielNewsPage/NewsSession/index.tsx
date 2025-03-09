@@ -16,7 +16,6 @@ const NewsSession = () => {
       return { ...acc, [news.id]: { likes: 0, dislikes: 0 } };
     }, {})
   );
-  console.log("votes", votes);
 
   const handleVote = (id: number, type: "likes" | "dislikes") => {
     setVotes((prev) => ({
