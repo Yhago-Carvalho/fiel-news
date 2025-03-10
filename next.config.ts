@@ -1,7 +1,7 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
 
-const nextConfig: NextConfig = {
-  output: 'export',
+const nextConfig = {
+  basePath: "/fiel-news",
   images: {
     unoptimized: true,
     domains: ['img.youtube.com'],
