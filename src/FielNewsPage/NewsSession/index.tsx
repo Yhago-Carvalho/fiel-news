@@ -18,7 +18,7 @@ const NewsSession = () => {
   );
 
   const handleVote = (id: number, type: "likes" | "dislikes") => {
-    setVotes((prev) => ({
+    setVotes((prev: Votes) => ({
       ...prev,
       [id]: {
         ...prev[id],
