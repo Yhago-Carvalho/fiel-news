@@ -1,7 +1,7 @@
-import { FielNewsPage } from "../FielNewsPage";
+import { HomePage } from "../FielNewsPage/home/HomePage";
 
 const Home = () => {
-  return <FielNewsPage />;
+  return <HomePage />;
 };
 
 export default Home;

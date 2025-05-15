@@ -3,7 +3,7 @@ import Header from "./Header";
 import VideoSection from "./VideosSection";
 import NewsSession from "./NewsSession";
 
-export const FielNewsPage = () => {
+export const HomePage = () => {
   return (
     <Box>
       <Header />
