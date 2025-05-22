@@ -38,6 +38,10 @@ const Header = () => {
             >
               <InstagramIcon />
             </IconButton>
+            <Button href="/tabela" sx={{ color: "black" }}>
+              Classificação
+            </Button>
+
             <Button
               href="https://www.corinthians.com.br/"
               target="_blank"
