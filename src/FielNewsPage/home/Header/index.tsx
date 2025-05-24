@@ -7,9 +7,19 @@ import {
   Typography,
 } from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
-import { BUY_TICKETS, OFFICIAL_WEBSITE, TITLE } from "./messages";
+import { BUY_TICKETS, OFFICIAL_WEBSITE, TITLE } from "../messages";
+import {
+  CORINTHIANS_INSTAGRAN_LINK,
+  CORINTHIANS_WEBSITE_LINK,
+  FIEL_TORCEDOR_WEBSITE_LINK,
+} from "./constants";
+import FanTokenPrice from "./FanTokenPrice";
 
-const Header = () => {
+interface HeaderProps {
+  fanTokenPrice: string | null;
+}
+
+const Header = ({ fanTokenPrice }: HeaderProps) => {
   return (
     <AppBar sx={{ backgroundColor: "gray" }}>
       <Toolbar sx={{ display: "flex", justifyContent: "flex-end", gap: 2 }}>
@@ -30,27 +40,25 @@ const Header = () => {
               {TITLE}
             </Typography>
           </Box>
-          <Box>
+          <Box sx={{ display: "flex", alignItems: "center", gap: 1 }}>
+            <FanTokenPrice price={fanTokenPrice} />
             <IconButton
-              href="https://www.instagram.com/corinthians/"
+              href={CORINTHIANS_INSTAGRAN_LINK}
               target="_blank"
               sx={{ color: "black" }}
             >
               <InstagramIcon />
             </IconButton>
-            <Button href="/tabela" sx={{ color: "black" }}>
-              Classificação
-            </Button>
 
             <Button
-              href="https://www.corinthians.com.br/"
+              href={CORINTHIANS_WEBSITE_LINK}
               target="_blank"
               sx={{ color: "black" }}
             >
               {OFFICIAL_WEBSITE}
             </Button>
             <Button
-              href="https://www.fieltorcedor.com.br/"
+              href={FIEL_TORCEDOR_WEBSITE_LINK}
               target="_blank"
               sx={{ color: "black" }}
             >

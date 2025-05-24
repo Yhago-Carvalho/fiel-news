@@ -3,10 +3,14 @@ import Header from "./Header";
 import VideoSection from "./VideosSection";
 import NewsSession from "./NewsSession";
 
-export const HomePage = () => {
+interface HomePageProps {
+  fanTokenPrice: string | null;
+}
+
+export const HomePage = ({ fanTokenPrice }: HomePageProps) => {
   return (
     <Box>
-      <Header />
+      <Header fanTokenPrice={fanTokenPrice} />
       <Box
         sx={{
           display: "flex",
